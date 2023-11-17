@@ -1,0 +1,13 @@
+.searchField {
+  background-color: transparent;
+  color: antiquewhite;
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid rgb(50, 50, 50);
+}
+
+.searchButton {
+  height: 30px;
+  background-color: rgb(111, 108, 108);;
+}

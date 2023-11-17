@@ -2,10 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const movieSlice = createSlice({
   name: "movie",
-  initialState: { movieList: [1, 2, 3, 4, 5], searchTerm: "" },
+  initialState: { movieList: [], searchTerm: "" },
   reducers: {
+    refreshMovieList: function (state, action) {
+      console.log(action.payload.Search);
+      state.movieList = action.payload.Search;
+    },
     updateSearchItem: function (state, action) {
-      console.log(action.payload)
       state.searchTerm = action.payload;
     },
   },

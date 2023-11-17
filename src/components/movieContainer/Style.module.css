@@ -1,0 +1,30 @@
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+  /* overflow-x: auto; */
+  /* flex-wrap: nowrap; */
+}
+.cardContainer {
+  margin: 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
+  /* border: 1px solid rgb(163, 157, 157); */
+  box-shadow: 5px 5px 10px 4px #5d5b5b33;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.posterContainer {
+  width: 150px;
+}
+
+.posterContainer img {
+  width: 100%;
+}
+
+.titleContainer {
+  width: 150px;
+  color: antiquewhite;
+}
