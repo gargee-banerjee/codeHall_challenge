@@ -1,16 +1,20 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 import { useSelector } from "react-redux";
-import styles from './Style.module.css';
+import styles from "./Style.module.css";
 
 const MovieContainer = () => {
   let movieList = useSelector((state) => state.movie.movieList);
-  const searchTerm = useSelector((state) => state.movie.searchTerm);
+  const movieName = useSelector((state) => state.movie.searchTerm);
+  const genre = useSelector((state) => state.movie.genre);
 
   movieList = movieList.filter((movie) => {
-    return searchTerm === ""
+    return genre === "" ? movie : movie.genres.includes(genre);
+  });
+  movieList = movieList.filter((movie) => {
+    return movieName === ""
       ? movie
-      : movie.Title.toLowerCase().includes(searchTerm.toLowerCase());
+      : movie.title.toLowerCase().includes(movieName.toLowerCase());
   });
 
   return (
