@@ -10,7 +10,7 @@ const Search = () => {
   const dispatch = useDispatch();
   const searchTerm = useRef();
   const options = [
-    "",
+    "Select Genre",
     "Adventure",
     "Science Fiction",
     "Action",
@@ -26,6 +26,7 @@ const Search = () => {
   function onGenreChange(e) {
     dispatch(movieActions.updateGenre(e.value));
   }
+  const dropdown = style.searchField;
   return (
     <div className={style.searchHeader}>
       <Dropdown
@@ -34,6 +35,7 @@ const Search = () => {
         value={defaultOption}
         placeholder="Select Genre"
         className={style.genreField}
+        // className='dropdown'
       />
       <div>
         <input
@@ -41,6 +43,7 @@ const Search = () => {
           placeholder="Movie Name..."
           ref={searchTerm}
           className={style.searchField}
+          // className='dropdown'
         ></input>
         <Button
           onClick={handleSearch}

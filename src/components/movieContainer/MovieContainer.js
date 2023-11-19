@@ -9,7 +9,9 @@ const MovieContainer = () => {
   const genre = useSelector((state) => state.movie.genre);
 
   movieList = movieList.filter((movie) => {
-    return genre === "" ? movie : movie.genres.includes(genre);
+    return genre === "" || genre === "Select Genre"
+      ? movie
+      : movie.genres.includes(genre);
   });
   movieList = movieList.filter((movie) => {
     return movieName === ""
